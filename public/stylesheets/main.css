@@ -1,0 +1,18 @@
+.campground__img {
+  width: 100%;
+}
+
+.campground__caption {
+  padding: 9px;
+}
+
+.cover-container {
+  background-image: url("/img/cover_photo.jpg");
+  background-position: bottom;
+  background-size: cover;
+  height: 95vh;
+}
+
+.landing-content {
+  padding-top: 25vh;
+}
