@@ -1,4 +1,4 @@
-var express = require("express"),
+const express = require("express"),
       app = express(),
       bodyParser = require("body-parser"),
       mongoose = require("mongoose"),
@@ -12,12 +12,13 @@ var express = require("express"),
       seedDB = require("./seeds");
 
 //requiring routes
-var commentRoutes = require("./routes/comments"),
+const commentRoutes = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes = require("./routes/index");
 
-mongoose
-  .connect("mongodb://localhost/yelp_camp", { 
+let url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
