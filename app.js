@@ -16,7 +16,15 @@ var commentRoutes = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose
+  .connect("mongodb://localhost/yelp_camp", { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('DB connected'))
+  .catch(err => {
+    console.log(`DB Connection Error: ${err.message}`);
+  });
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
