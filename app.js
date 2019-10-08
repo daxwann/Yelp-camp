@@ -16,7 +16,7 @@ const commentRoutes = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes = require("./routes/index");
 
-let url = "mongodb+srv://user1:6FOd5RiPtBtKySYP@cluster0-xrxs8.mongodb.net/admin?retryWrites=true&w=majority" || "mongodb://localhost/yelp_camp"
+let url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
 let port = process.env.PORT || 3000;
 
 mongoose
