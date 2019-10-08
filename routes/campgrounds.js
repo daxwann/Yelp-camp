@@ -1,32 +1,32 @@
-var express = require("express");
-var router = express.Router();
-var Campground = require("../models/campground");
-var middleware = require("../middleware");
+const express = require("express");
+const router = express.Router();
+const Campground = require("../models/campground");
+const middleware = require("../middleware");
 
 //INDEX
 router.get("/", function(req, res){
 //get all campgrounds from DB
-Campground.find({}, function(err, allCampgrounds) {
-  if(err){
-    console.log(err);
-  } else {
-    res.render("campgrounds/index", {campgrounds:allCampgrounds});
-  }
-});
+  Campground.find({}, function(err, allCampgrounds) {
+    if(err){
+      console.log(err);
+    } else {
+      res.render("campgrounds/index", {campgrounds:allCampgrounds});
+    }
+  });
 });
 
 //CREATE
 router.post("/", middleware.isLoggedIn, function(req, res){
   //get data from form and add to campgrounds array
-  var name = req.body.name;
-  var image = req.body.image;
-  var desc = req.body.description;
-  var price = req.body.price;
-  var author = {
+  let name = req.body.name;
+  let image = req.body.image;
+  let desc = req.body.description;
+  let price = req.body.price;
+  let author = {
     id: req.user._id,
     username: req.user.username
   };
-  var newCampground = {name: name, price: price, image: image, description: desc, author: author};
+  let newCampground = {name: name, price: price, image: image, description: desc, author: author};
   //create a new campground
   Campground.create(newCampground, function(err, newlyCreated) {
     if(err){

@@ -1,8 +1,8 @@
-var mongoose = require("mongoose");
-var Campground = require("./models/campground");
-var Comment = require("./models/comment");
+const mongoose = require("mongoose");
+const Campground = require("./models/campground");
+const Comment = require("./models/comment");
 
-var data = [
+let data = [
   {
     name: "Joshua Tree",
     image: "https://pixabay.com/get/ef3cb00b2af01c22d2524518b7444795ea76e5d004b014439cf4c17da5e9bd_340.jpg",
