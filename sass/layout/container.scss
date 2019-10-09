@@ -1,0 +1,39 @@
+html {
+  //this defines what 1rem is
+  font-size: 62.5%; //10px
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--color-grey-dark-2);
+  box-sizing: border-box;
+  background-image: linear-gradient(to right bottom, 
+                      var(--color-primary-light), 
+                      var(--color-primary-dark));
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+}
+
+.body-container {
+  max-width: 120rem;
+  margin: 3rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+  transition: all .2s;
+  overflow: hidden;
+
+  @include respond(bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+  }
+}

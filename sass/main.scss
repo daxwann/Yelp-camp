@@ -1,0 +1,16 @@
+// CSS Reset
+@import "base/reset.scss";
+
+// Abstracts
+@import "abstracts/mixins.scss";
+@import "abstracts/variables.scss";
+
+// Layout
+@import "layout/container.scss";
+@import "layout/header.scss";
+@import "layout/navigation.scss";
+@import "layout/footer.scss";
+
+// Pages
+@import "pages/landing_page.scss";
+@import "pages/campgrounds_show.scss"
