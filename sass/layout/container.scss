@@ -15,4 +15,18 @@ body {
 .container--main {
   background-color: var(--color-blue-lightest);
   padding: 2rem;
+  min-height: 95vh;
+
+  // @include respond(bp-smallest) {
+  //   padding: 10px 2px;
+  //   margin: 0;
+  // }
+}
+
+.container--outer {
+  width: 100%; 
+  @include respond(bp-largest) {
+    padding: 0;
+    margin: 0;
+  }
 }

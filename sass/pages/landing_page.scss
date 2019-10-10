@@ -13,9 +13,19 @@
 .cover-heading {
   text-shadow: var(--shadow-dark);
   font-size: 3rem;
+
+  @include respond(bp-smallest) {
+    font-size: 2rem;
+  }
 }
 
 .lead--btn {
   margin-top: 2rem;
+}
+
+.lead--subtitle {
+  @include respond(bp-smallest) {
+    font-size: 1.2rem;
+  }
 }
 

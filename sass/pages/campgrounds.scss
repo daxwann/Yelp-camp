@@ -6,3 +6,20 @@
   padding: 9px;
 }
 
+.welcome {
+  &--heading {
+    font-size: 2rem;
+
+    @include respond(bp-smallest) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &--subheading {
+    font-size: 1.6rem;
+
+    @include respond(bp-smallest) {
+      font-size: 1.4rem;
+    }
+  }
+}
