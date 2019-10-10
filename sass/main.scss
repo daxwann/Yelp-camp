@@ -1,5 +1,6 @@
 // CSS Reset
 @import "base/reset.scss";
+@import "base/font.scss";
 
 // Abstracts
 @import "abstracts/mixins.scss";
@@ -13,4 +14,7 @@
 
 // Pages
 @import "pages/landing_page.scss";
-@import "pages/campgrounds_show.scss"
+@import "pages/campgrounds.scss";
+
+// Components
+@import "components/form.scss";
