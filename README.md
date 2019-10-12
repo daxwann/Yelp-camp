@@ -23,25 +23,25 @@ App that allows registered user to create camping site reviews and to comment on
 
 ### Install Node.js runtime environment
 
-`brew update`
-`brew install node`
+`$ brew update`
+`$ brew install node`
 
 ### Install MongoDB
 
-`brew tap mongodb/brew`
-`brew install mongodb-community`
+`$ brew tap mongodb/brew`
+`$ brew install mongodb-community`
 
 ### Clone YelpCamp Github repository and install dependencies
 
-`git clone https://github.com/daxwann/Yelp-camp.git`
-`cd Yelp-camp`
-`npm install`
+`$ git clone https://github.com/daxwann/Yelp-camp.git`
+`$ cd Yelp-camp`
+`$ npm install`
  
 ### Start local MongoDB service or create MongoDB Atlas cluster
 
 #### Local MongoDB service
 
-`brew services start mongodb-community`
+`$ brew services start mongodb-community`
 
 #### MongoDB Atlas cluster
 
@@ -53,5 +53,5 @@ App that allows registered user to create camping site reviews and to comment on
 
 ### Start application
 
-`npm run start`
+`$ npm run start`
 
