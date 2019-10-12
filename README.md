@@ -15,7 +15,7 @@ App that allows registered user to create camping site reviews and to comment on
 
 [YelpCamp](https://yelp-clone-camping.herokuapp.com/)
 
-## Intructions to edit app
+## Intructions to edit and run app locally
 
 ### Install Brew
 
@@ -24,17 +24,21 @@ App that allows registered user to create camping site reviews and to comment on
 ### Install Node.js runtime environment
 
 `$ brew update`
+
 `$ brew install node`
 
 ### Install MongoDB
 
 `$ brew tap mongodb/brew`
+
 `$ brew install mongodb-community`
 
 ### Clone YelpCamp Github repository and install dependencies
 
 `$ git clone https://github.com/daxwann/Yelp-camp.git`
+
 `$ cd Yelp-camp`
+
 `$ npm install`
  
 ### Start local MongoDB service or create MongoDB Atlas cluster
