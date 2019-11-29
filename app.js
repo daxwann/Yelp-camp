@@ -16,7 +16,7 @@ const commentRoutes = require("./routes/comments"),
       campgroundRoutes = require("./routes/campgrounds"),
       indexRoutes = require("./routes/index");
 
-let url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+let url = process.env.DATABASEURL || "mongodb://db:27017/yelp_camp"
 let port = process.env.PORT || 3000;
 
 mongoose
@@ -34,7 +34,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-//seedDB();
+
+if (url === "mongodb://db:27017/yelp_camp") {
+  seedDB();
+}
 
 //PASSPORT CONFIG
 app.use(require("express-session")({

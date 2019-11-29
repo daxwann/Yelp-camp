@@ -15,47 +15,34 @@ App that allows registered user to create camping site reviews and to comment on
 
 [YelpCamp](https://yelp-clone-camping.herokuapp.com/)
 
-## Intructions to edit and run app locally
+## Intructions to edit and run app locally in Docker container
 
 ### Install Brew
 
 `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-### Install Node.js runtime environment
+### Install Docker, docker-machine, and docker-compose
 
 `$ brew update`
 
-`$ brew install node`
+`$ brew install docker docker-machine docker-compose`
 
-### Install MongoDB
+### Install Git and clone YelpCamp Github repository
 
-`$ brew tap mongodb/brew`
-
-`$ brew install mongodb-community`
-
-### Clone YelpCamp Github repository and install dependencies
+`$ brew install git`
 
 `$ git clone https://github.com/daxwann/Yelp-camp.git`
-
-`$ cd Yelp-camp`
-
-`$ npm install`
  
-### Start local MongoDB service or create MongoDB Atlas cluster
+### Create docker-machine and set up environmental variables
 
-#### Local MongoDB service
+`$ docker-machine create --driver=virtualbox Char`
 
-`$ brew services start mongodb-community`
+`$ docker-machine start Char`
 
-#### MongoDB Atlas cluster
+`$ eval $(docker-machine env Char)`
 
-1. Create an account on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and follow instructions to create a free cluster
+### Use docker-compose to build and run app and mongo services
 
-2. Connect the Atlas cluster to YelpCamp app by copying the given cluster connection URL
+`$ docker-compose up`
 
-3. Either create an environmental variable in your shell with `$ export DATABASEURL="<Connection URL>"` or replace `process.env.DATABASEURL` on line 19 of `/app.js` with the connection URL in string quotation.
-
-### Start application
-
-`$ npm run start`
-
+The application will be up on the docker-machine ip under port 3000
