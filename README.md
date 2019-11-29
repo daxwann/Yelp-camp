@@ -15,6 +15,8 @@ App that allows registered user to create camping site reviews and to comment on
 
 [YelpCamp](https://yelp-clone-camping.herokuapp.com/)
 
+[Github] (https://github.com/daxwann/Yelp-camp)
+
 ## Intructions to edit and run app locally in Docker container
 
 ### Install Brew
