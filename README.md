@@ -48,3 +48,7 @@ App that allows registered user to create camping site reviews and to comment on
 `$ docker-compose up`
 
 The application will be up on the docker-machine ip under port 3000
+
+YelpCamp is part of Web Developer Bootcamp on Udemy.
+
+Creative Commons License. 
